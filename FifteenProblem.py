@@ -257,15 +257,9 @@ def main():
     elif args[1] == "DFS":
         dfs(sourceNode)
     elif args[1] == "GBFS":
-        if args[2] == "h1":
-            gbfs(sourceNode, "h1")
-        else:
-            gbfs(sourceNode, "h2")
+        gbfs(sourceNode, args[2])
     elif args[1] == "AStar":
-        if args[2] == "h1":
-            astar(sourceNode, "h1")
-        else:
-            astar(sourceNode, "h2")
+        astar(sourceNode, args[2])
     else:
         dls(sourceNode, int(args[2]))
 
