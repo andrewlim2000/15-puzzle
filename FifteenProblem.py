@@ -1,3 +1,7 @@
+# author: Andrew Lim
+# version: 07/12/2020
+# description: A set of	search algorithms that find solutions to the 15-puzzle.	
+
 import sys
 import copy
 import math
