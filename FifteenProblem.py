@@ -133,7 +133,7 @@ def dfs(source):
     # solution not found
     print("-1, 0, 0, 0")
 
-# Greedy best-first	search
+# Greedy best-first search
 def gbfs(source, h):
     global maxFringe
     pq = PriorityQueue()
