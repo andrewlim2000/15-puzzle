@@ -93,7 +93,7 @@ def bfs(source):
         if node.state == goalState1 or node.state == goalState2:
             print(str(depth) + ", " + str(numCreated) + ", " + 
                 str(len(expanded)) + ", " + str(maxFringe))
-            break
+            return
         expanded.add(str(node.state))
         create_branches(node)
         for successor in node.successors:
@@ -116,7 +116,7 @@ def dfs(source):
         if node.state == goalState1 or node.state == goalState2:
             print(str(depth) + ", " + str(numCreated) + ", " + 
                 str(len(expanded)) + ", " + str(maxFringe))
-            break
+            return
         expanded.add(str(node.state))
         create_branches(node)
         list1 = []
@@ -146,7 +146,7 @@ def gbfs(source, h):
         if node.state == goalState1 or node.state == goalState2:
             print(str(depth) + ", " + str(numCreated) + ", " + 
                 str(len(expanded)) + ", " + str(maxFringe))
-            break
+            return
         expanded.add(str(node.state))
         create_branches(node)
         for successor in node.successors:
@@ -176,7 +176,7 @@ def astar(source, h):
         if node.state == goalState1 or node.state == goalState2:
             print(str(depth) + ", " + str(numCreated) + ", " + 
                 str(len(expanded)) + ", " + str(maxFringe))
-            break
+            return
         expanded.add(str(node.state))
         create_branches(node)
         for successor in node.successors:
@@ -202,7 +202,7 @@ def dls(source, limit):
         if node.state == goalState1 or node.state == goalState2:
             print(str(depth) + ", " + str(numCreated) + ", " + 
                 str(len(expanded)) + ", " + str(maxFringe))
-            break
+            return
         expanded.add(str(node.state))
         create_branches(node)
         if depth <= limit:
