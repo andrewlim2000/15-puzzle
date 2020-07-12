@@ -84,7 +84,7 @@ def create_branches(node):
             numCreated = numCreated + 1
             print(new_node.state)
 
-# Breadth-first	search
+# Breadth-first search
 def bfs(source):
     global maxFringe
     queue = Queue()
