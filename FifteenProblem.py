@@ -29,8 +29,10 @@ maxFringe = 1
 def create_branches(node):
     global depth
     global numCreated
+
+    # increment depth counter on new level
     if len(node.successors) == 0:
-        depth = depth + 1
+        depth += 1
 
     # can blank move right?
     if (node.blank + 1) % 4 != 0:
@@ -40,10 +42,11 @@ def create_branches(node):
         new_node.blank = node.blank + 1
         new_node.successors = []
 
+        # add successor only if successor node has not been expanded yet
         if str(new_node.state) not in expanded:
             node.add_successor(new_node)
-            numCreated = numCreated + 1
-            print(new_node.state)
+            numCreated += 1
+            # print(new_node.state)
 
     # can blank move down?
     if math.ceil((node.blank + 1) / 4) != 4:
@@ -53,10 +56,11 @@ def create_branches(node):
         new_node.blank = node.blank + 4
         new_node.successors = []
 
+        # add successor only if successor node has not been expanded yet
         if str(new_node.state) not in expanded:
             node.add_successor(new_node)
             numCreated = numCreated + 1
-            print(new_node.state)
+            # print(new_node.state)
 
     # can blank move left?
     if node.blank % 4 != 0:
@@ -66,10 +70,11 @@ def create_branches(node):
         new_node.blank = node.blank - 1
         new_node.successors = []
 
+        # add successor only if successor node has not been expanded yet
         if str(new_node.state) not in expanded:
             node.add_successor(new_node)
             numCreated = numCreated + 1
-            print(new_node.state) 
+            # print(new_node.state) 
 
     # can blank move up?
     if math.floor(node.blank / 4) != 0:
@@ -79,10 +84,11 @@ def create_branches(node):
         new_node.blank = node.blank - 4
         new_node.successors = []
 
+        # add successor only if successor node has not been expanded yet
         if str(new_node.state) not in expanded:
             node.add_successor(new_node)
             numCreated = numCreated + 1
-            print(new_node.state)
+            # print(new_node.state)
 
 # Breadth-first search
 def bfs(source):
