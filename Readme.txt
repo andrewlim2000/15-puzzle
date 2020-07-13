@@ -64,3 +64,18 @@ The time complexity of A* depends on the heuristic.
 Good heuristics are those with low effective branching factor (the optimal being b* = 1).
 
 DLS: O(b^l) -> O(4^l)
+
+------------------------------------------------------------
+
+***NOTE: Program Instructions***
+
+If you are unable to run the program through the command line, you would have to
+just manually code in the input arguments in FifteenProblem.py. On line 247, comment out:
+
+args = sys.argv[1:]
+
+Then below that, create a list args that contains the input instructions such as:
+
+args = ["123456789 FBDAEC", "GBFS", "h2"]
+
+You should then be able to run the program normally (not from the command line).
